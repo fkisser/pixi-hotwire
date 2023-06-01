@@ -9,14 +9,14 @@ const app = new Application({
 	height: 480
 });
 
-Loader.shared.add({ url: "./spider.png", name: "spider" });
-Loader.shared.add({ url: "./clampy.png", name: "clampy" });
+Loader.shared.add({ url: "../static/spider.png", name: "spider" });
+Loader.shared.add({ url: "../static/clampy.png", name: "clampy" });
 
 Loader.shared.onComplete.add(() => {
 	const clampy: Sprite = Sprite.from("clampy");
 	
-	// clampy.anchor.set(0.5);
-	console.log(clampy.width, clampy.height);
+	clampy.anchor.set(0.5);
+	console.log("Holis",clampy.width, clampy.height);
 	
 	
 	clampy.x = app.screen.width / 2;
